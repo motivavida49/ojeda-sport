@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ojeda Sport | Tienda Deportiva</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  
+   <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+   <div class="global-sport-pattern">
+  <i class="fa-solid fa-trophy pattern-icon pattern-1"></i>
+  <i class="fa-solid fa-dumbbell pattern-icon pattern-2"></i>
+  <i class="fa-solid fa-futbol pattern-icon pattern-3"></i>
+  <i class="fa-solid fa-shoe-prints pattern-icon pattern-4"></i>
+  <i class="fa-solid fa-medal pattern-icon pattern-5"></i>
+  <i class="fa-solid fa-basketball pattern-icon pattern-6"></i>
+  <i class="fa-solid fa-baseball pattern-icon pattern-7"></i>
+  <i class="fa-solid fa-table-tennis-paddle-ball pattern-icon pattern-8"></i>
+</div> 
+  <div class="scroll-progress">
+    <span id="scrollProgress"></span>
+  </div>
+
+ <aside class="page-nav" aria-label="Navegación rápida">
+  <a href="#inicio" class="active" data-label="Inicio"></a>
+  <a href="#nuevos" data-label="Categoría"></a>
+  <a href="#balones" data-label="Balones"></a>
+  <a href="#mundial" data-label="Mundial"></a>
+  <a href="#promo" data-label="Oferta"></a>
+  <a href="#videos" data-label="Videos"></a>
+  <a href="#accesorios" data-label="Accesorios"></a>
+  <a href="#redes" data-label="Redes"></a>
+  <a href="#info" data-label="Info"></a>
+</aside>
+
+  <header>
+  <div class="container navbar">
+    <div class="logo">
+  <img src="logo_negro.png" alt="OJEDA SPORT" class="logo-img">
+  <div>
+    <h2>OJEDA SPORT</h2>
+    <p>Tienda deportiva</p>
+  </div>
+</div>
+
+    <nav>
+      <a href="#inicio" class="active" data-label="Inicio"></a>
+      <a href="#categorias" data-label="Categorías"></a>
+      <a href="#productos" data-label="Productos"></a>
+      <a href="#ropa" data-label="Ropa"></a>
+      <a href="#balones" data-label="Balones"></a>
+      <a href="#videos" data-label="Videos"></a>
+      <a href="#info" data-label="Info"></a>
+      <a href="#redes" data-label="Redes"></a>
+      <a href="#contacto" data-label="Contacto"></a>
+    </nav>
+
+    <a href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20catálogo%20disponible" 
+       class="cart-btn" target="_blank">
+      Catálogo 🛒
+    </a>
+  </div>
+</header>
+
+</main>
+    <section id="inicio" class="container hero">
+       
+      <div class="hero-text">
+        <span class="badge">Nueva colección deportiva</span>
+        <h1>Todo para jugar, entrenar y <span>vivir el deporte.</span></h1>
+        <p>
+          Ropa, calzado y accesorios deportivos seleccionados para rendimiento, comodidad y estilo. Compra fácil, recibe rápido y entrena sin excusas.
+        </p>
+        <div class="hero-buttons">
+          <a href="#productos" class="btn-primary">Ver productos</a>
+          <a href="#categorias" class="btn-secondary">Explorar categorías</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="hero-ojeda.png" alt="Imagen promocional Ojeda Sport">
+        <div class="offer-box">
+          <small>Promo de temporada</small>
+          <h3>Hasta 35% OFF</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="nuevos" class="container section audience-section">
+  <div class="section-title audience-title">
+    <small>Explora por categoría</small>
+    <h2>Encuentra lo que necesitas para entrenar mejor.</h2>
+    <p>
+  Ropa, accesorios y artículos deportivos para dama, caballero, niños y entrenamiento diario.
+</p>
+  </div>
+
+  <div class="audience-grid">
+    <a 
+      href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20productos%20deportivos%20para%20mujeres." 
+      class="audience-card audience-card-large"
+      target="_blank"
+    >
+      <video class="audience-video" autoplay muted loop playsinline>
+        <source src="video-mujeres.mp4" type="video/mp4">
+      </video>
+      <div class="audience-overlay"></div>
+      <div class="audience-content">
+        <span>Ropa y accesorios</span>
+        <h3>Para dama</h3>
+      </div>
+    </a>
+
+    <a 
+      href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20productos%20deportivos%20para%20hombres." 
+      class="audience-card audience-card-large"
+      target="_blank"
+    >
+      <video class="audience-video" autoplay muted loop playsinline>
+        <source src="video-hombres.mp4" type="video/mp4">
+      </video>
+      <div class="audience-overlay"></div>
+      <div class="audience-content">
+        <span>Entrenamiento y deporte</span>
+        <h3>Para caballero</h3>
+      </div>
+    </a>
+
+    <a 
+      href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20productos%20deportivos%20para%20ni%C3%B1os." 
+      class="audience-card"
+      target="_blank"
+    >
+      <video class="audience-video" autoplay muted loop playsinline>
+        <source src="video-ninos.mp4" type="video/mp4">
+      </video>
+      <div class="audience-overlay"></div>
+      <div class="audience-content">
+        <span>Comodidad y movimiento</span>
+        <h3>Para niños</h3>
+      </div>
+    </a>
+
+    <a 
+      href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20accesorios%20deportivos%20disponibles." 
+      class="audience-card"
+      target="_blank"
+    >
+      <video class="audience-video" autoplay muted loop playsinline>
+        <source src="video-accesorios.mp4" type="video/mp4">
+      </video>
+      <div class="audience-overlay"></div>
+      <div class="audience-content">
+        <span>Balones, guantes y más</span>
+        <h3>Accesorios deportivos</h3>
+      </div>
+    </a>
+  </div>
+</section>
+   
+<section id="balones" class="container section">
+  <div class="real-balls-section">
+    <div class="real-balls-header">
+      <div>
+        <span class="badge">Modelos en movimiento</span>
+        <h2>Balones para cada forma de jugar.</h2>
+      </div>
+
+      <p>
+        Explora modelos de fútbol, voleibol y básquet con una vista dinámica pensada para apreciar mejor cada diseño. Desplázate hacia los lados o usa las flechas para seguir viendo más modelos.
+      </p>
+    </div>
+
+    <div class="balls-slider" id="ballsSlider">
+      <div class="balls-track" id="ballsTrack">
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-futbol-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Fútbol clásico</h3>
+          <p>Balón resistente para entrenamiento diario.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20f%C3%BAtbol." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-futbol-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Fútbol premium</h3>
+          <p>Modelo llamativo para cancha y competencia.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20f%C3%BAtbol." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-futbol-3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Fútbol color</h3>
+          <p>Diseño visual para entrenar o competir.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20f%C3%BAtbol." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-voleibol-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Voleibol clásico</h3>
+          <p>Diseño liviano con buen agarre.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20voleibol." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-voleibol-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Voleibol pro</h3>
+          <p>Ideal para prácticas, torneos y partidos.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20voleibol." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-voleibol-3.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Voleibol color</h3>
+          <p>Modelo visual para mayor presencia en juego.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20voleibol." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-basquet-1.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Básquet clásico</h3>
+          <p>Textura firme para mejor control del bote.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20b%C3%A1squet." target="_blank">Consultar precio</a>
+        </div>
+
+        <div class="ball-card-real">
+          <div class="real-ball-wrap video-ball-wrap">
+            <video class="ball-video-3d" autoplay muted loop playsinline>
+              <source src="balon-basquet-2.mp4" type="video/mp4">
+            </video>
+          </div>
+          <h3>Básquet street</h3>
+          <p>Modelo urbano para juego exterior.</p>
+          <a class="ball-price" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20el%20precio%20de%20un%20bal%C3%B3n%20de%20b%C3%A1squet." target="_blank">Consultar precio</a>
+        </div>
+
+      </div>
+    </div>
+
+   <div class="slider-actions">
+  <button 
+    class="slider-btn" 
+    id="prevBalls" 
+    type="button" 
+    aria-label="Ver balones anteriores"
+    onclick="document.getElementById('ballsSlider').scrollBy({ left: -360, behavior: 'smooth' })"
+  >
+    <i class="fa-solid fa-arrow-left"></i>
+  </button>
+
+  <button 
+    class="slider-btn" 
+    id="nextBalls" 
+    type="button" 
+    aria-label="Ver más balones"
+    onclick="document.getElementById('ballsSlider').scrollBy({ left: 360, behavior: 'smooth' })"
+  >
+    <i class="fa-solid fa-arrow-right"></i>
+  </button>
+</div>
+  </div>
+</section>
+
+   <section id="mundial" class="container section mundial-section">
+  <div class="section-title mundial-title">
+    <small>Zona Mundial</small>
+    <h2>Vive el fútbol con tu selección.</h2>
+    <p>
+      Camisas de selecciones, balón mundialista y piezas deportivas para apoyar, jugar y vivir cada partido.
+    </p>
+  </div>
+
+  <div class="worldcup-grid">
+    <div class="jersey-card" data-video="camisa-argentina.mp4">
+      <video class="jersey-video" autoplay muted loop playsinline>
+        <source src="camisa-argentina.mp4" type="video/mp4">
+      </video>
+      <span>Argentina</span>
+      
+    </div>
+
+    <div class="jersey-card jersey-card-contain" data-video="camisa-brasil.mp4">
+      <video class="jersey-video jersey-video-contain" autoplay muted loop playsinline>
+        <source src="camisa-brasil.mp4" type="video/mp4">
+      </video>
+      <span>Brasil</span>
+      
+    </div>
+
+    <div class="jersey-card" data-video="camisa-colombia.mp4">
+      <video class="jersey-video" autoplay muted loop playsinline>
+        <source src="camisa-colombia.mp4" type="video/mp4">
+      </video>
+      <span>Colombia</span>
+      
+    </div>
+
+    <div class="jersey-card" data-video="camisa-espana.mp4">
+      <video class="jersey-video" autoplay muted loop playsinline>
+        <source src="camisa-espana.mp4" type="video/mp4">
+      </video>
+      <span>España</span>
+      
+    </div>
+
+    <div class="worldcup-center">
+      <div class="worldcup-badge">Colección mundialista</div>
+
+      <video class="worldcup-ball-video" autoplay muted loop playsinline>
+        <source src="balon-mundial.mp4" type="video/mp4">
+      </video>
+
+      <h3>Balón mundialista</h3>
+      <p>Consulta disponibilidad de camisas, modelos y tallas por WhatsApp.</p>
+
+      <a class="worldcup-btn" href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20la%20colecci%C3%B3n%20mundialista%20disponible." target="_blank">
+        Consultar colección
+      </a>
+    </div>
+
+    <div class="jersey-card" data-video="camisa-portugal.mp4">
+      <video class="jersey-video" autoplay muted loop playsinline>
+        <source src="camisa-portugal.mp4" type="video/mp4">
+      </video>
+      <span>Portugal</span>
+      
+    </div>
+
+    <div class="jersey-card jersey-card-contain" data-video="camisa-alemania.mp4">
+      <video class="jersey-video jersey-video-contain" autoplay muted loop playsinline>
+        <source src="camisa-alemania.mp4" type="video/mp4">
+      </video>
+      <span>Alemania</span>
+      
+    </div>
+
+    <div class="jersey-card" data-video="camisa-francia.mp4">
+      <video class="jersey-video" autoplay muted loop playsinline>
+        <source src="camisa-francia.mp4" type="video/mp4">
+      </video>
+      <span>Francia</span>
+     
+    </div>
+
+    <div class="jersey-card" data-video="camisa-argentina-2.mp4">
+      <video class="jersey-video" autoplay muted loop playsinline>
+        <source src="camisa-argentina-2.mp4" type="video/mp4">
+      </video>
+      <span>Argentina edición 2</span>
+      
+    </div>
+  </div>
+</section>
+
+    
+
+   <section id="promo" class="container section">
+  <div class="promo">
+        <div class="promo-content">
+          <small>Oferta activa</small>
+          <h2>Renueva tu equipo deportivo hoy.</h2>
+          <p>
+            Combina zapatillas, ropa técnica y accesorios de entrenamiento con descuentos por compra múltiple.
+          </p>
+          <a href="#productos" class="btn-dark">Comprar promoción</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?q=80&w=1200&auto=format&fit=crop" alt="Entrenamiento deportivo" />
+      </div>
+    </section>
+
+    <section id="videos" class="container section ojeda-videos-section">
+  <div class="ojeda-videos-layout">
+    <div class="ojeda-videos-text">
+      <small>Videos de la tienda</small>
+      <h2>Mira lo nuevo en acción.</h2>
+      <p>
+        Camisas mundialistas, ropa deportiva y balones reales desde los videos de la tienda.
+      </p>
+
+      <div class="video-external-links">
+        <a href="https://www.tiktok.com/@ojedasportss?_r=1&_t=ZS-96QRAnDXPbF" target="_blank">Ver TikTok</a>
+        <a href="https://www.instagram.com/ojedasportss?igsh=MXhkYnZ6b25zdWFqNQ==" target="_blank">Ver Instagram</a>
+        <a href="https://wa.me/584121068677" target="_blank">Consultar por WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="ojeda-phone-gallery">
+      <div class="ojeda-phone">
+        <div class="ojeda-phone-screen">
+          <video class="ojeda-phone-media" autoplay muted loop playsinline>
+            <source src="video-telefono-1.mp4" type="video/mp4">
+          </video>
+
+          <div class="ojeda-phone-overlay">
+            <span>TIKTOK / REEL</span>
+            <h3>Camisas mundialistas</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="ojeda-phone ojeda-phone-center">
+        <div class="ojeda-phone-screen">
+          <video class="ojeda-phone-media" autoplay muted loop playsinline>
+            <source src="video-telefono-2.mp4" type="video/mp4">
+          </video>
+
+          <div class="ojeda-phone-overlay">
+            <span>INSTAGRAM</span>
+            <h3>Licras y ropa para entrenar</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="ojeda-phone">
+        <div class="ojeda-phone-screen">
+          <video class="ojeda-phone-media" autoplay muted loop playsinline>
+            <source src="video-telefono-3.mp4" type="video/mp4">
+          </video>
+
+          <div class="ojeda-phone-overlay">
+            <span>REEL DE PRODUCTOS</span>
+            <h3>Balones disponibles</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="accesorios" class="container section">
+      <div class="section-title">
+        <small>Accesorios</small>
+        <h2>Protección y soporte para entrenar mejor</h2>
+      </div>
+
+      <div class="accessories-grid">
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h3>Rodilleras de voleibol</h3>
+            <p>Protección para caídas, defensa y entrenamientos intensos en cancha.</p>
+          </div>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-hand"></i></div>
+          <div>
+            <h3>Guantes para pesas</h3>
+            <p>Mejor agarre, menos fricción y más seguridad al levantar peso.</p>
+          </div>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-hand-fist"></i></div>
+          <div>
+            <h3>Straps y muñequeras</h3>
+            <p>Apoyo para rutinas de fuerza, agarre y estabilidad de muñeca.</p>
+          </div>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div>
+            <h3>Bolsos deportivos</h3>
+            <p>Para llevar ropa, zapatos, termo, accesorios y equipo de entrenamiento.</p>
+          </div>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-hat-cowboy"></i></div>
+          <div>
+            <h3>Gorras y viseras</h3>
+            <p>Complementos para entrenar al aire libre o completar el outfit deportivo.</p>
+          </div>
+        </div>
+
+        <div class="accessory-card">
+          <div class="accessory-icon"><i class="fa-solid fa-bottle-water"></i></div>
+          <div>
+            <h3>Termos y botellas</h3>
+            <p>Hidratación práctica para gimnasio, cancha, running o uso diario.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="container section">
+      <div class="guide-box">
+        <div>
+          <h2>Guía rápida para comprar mejor.</h2>
+          <p>
+            Esta sección hace la página más útil: ayuda al cliente a elegir según su deporte, necesidad y nivel de entrenamiento.
+          </p>
+        </div>
+
+        <div class="guide-list">
+          <div class="guide-item">
+            1. Si juegas voleibol
+            <small>Busca rodilleras, balón adecuado, shorts cómodos y medias resistentes.</small>
+          </div>
+          <div class="guide-item">
+            2. Si entrenas pesas
+            <small>Prioriza guantes, straps, cinturón, termo y ropa flexible.</small>
+          </div>
+          <div class="guide-item">
+            3. Si compras para equipo
+            <small>Consulta por balones, uniformes, accesorios y disponibilidad por cantidad.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="container section">
+      <div class="section-title">
+        <small>Clientes</small>
+        <h2>Personas que ya compran para entrenar</h2>
+      </div>
+
+      <div class="testimonials">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">“Conseguí rodilleras y balón para voleibol rápido. La atención fue directa y clara.”</p>
+          <div class="client-line"><div class="client-avatar">A</div><strong>Cliente satisfecho</strong></div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">“Compré guantes para pesas y me ayudaron a escoger el modelo que necesitaba.”</p>
+          <div class="client-line"><div class="client-avatar">M</div><strong>Atención personalizada</strong></div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">“Me gustó que tienen variedad de balones y accesorios deportivos en un solo lugar.”</p>
+          <div class="client-line"><div class="client-avatar">J</div><strong>Compra en tienda</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="redes" class="container section">
+  <div class="social-section">
+    <div class="social-copy">
+      <span class="badge">Redes y contacto</span>
+      <h2>Sigue la tienda y compra directo.</h2>
+      <p>
+        Deja aquí los accesos oficiales a TikTok, Instagram y WhatsApp
+        para que el cliente vea videos, novedades, disponibilidad y
+        pueda escribir de inmediato.
+      </p>
+    </div>
+
+    <div class="social-cards">
+      <a 
+        class="social-card social-card-active" 
+        href="https://www.tiktok.com/@ojedasportss?_r=1&_t=ZS-96QRAnDXPbF" 
+        target="_blank"
+      >
+        <div class="social-mark social-tiktok">
+          <i class="fa-brands fa-tiktok"></i>
+        </div>
+        <h3>TikTok</h3>
+        <p>Videos cortos de productos, llegadas nuevas, pruebas y contenido deportivo.</p>
+        <span class="social-btn">Ver TikTok</span>
+      </a>
+
+      <a 
+        class="social-card" 
+        href="https://www.instagram.com/ojedasportss?igsh=MXhkYnZ6b25zdWFqNQ==" 
+        target="_blank"
+      >
+        <div class="social-mark social-instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+        <h3>Instagram</h3>
+        <p>Catálogo visual, reels, historias, promociones y publicaciones de la tienda.</p>
+        <span class="social-btn">Ver Instagram</span>
+      </a>
+
+      <a 
+        class="social-card" 
+        href="https://wa.me/584121068677" 
+        target="_blank"
+      >
+        <div class="social-mark social-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Consulta precios, tallas, modelos disponibles y coordina la compra.</p>
+        <span class="social-btn">Escribir por WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section id="info" class="container section">
+  <div class="store-info-panel">
+    <div class="store-info-header">
+      <span class="badge-dark">Guía rápida de compra</span>
+      <h2>Compra fácil, delivery y retiro en tienda.</h2>
+      <p>
+        Consulta disponibilidad por WhatsApp, confirma talla, color o modelo y coordina tu compra de forma sencilla.
+      </p>
+    </div>
+
+    <div class="store-info-grid">
+      <div class="store-info-item">
+        <div class="store-info-icon">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div>
+          <h3>Delivery disponible</h3>
+          <p>Coordina la entrega por WhatsApp según zona y disponibilidad.</p>
+        </div>
+      </div>
+
+      <div class="store-info-item">
+        <div class="store-info-icon">
+          <i class="fa-solid fa-store"></i>
+        </div>
+        <div>
+          <h3>Retiro en tienda</h3>
+          <p>Aparta tu producto por WhatsApp y retíralo directamente en el local.</p>
+        </div>
+      </div>
+
+      <div class="store-info-item">
+        <div class="store-info-icon">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div>
+          <h3>Ubicación</h3>
+          <p>Ciudad Ojeda, Edo. Zulia, CCC Venezuela. Confirma detalles por WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="store-info-item">
+        <div class="store-info-icon">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <div>
+          <h3>Horario</h3>
+          <p>Lunes a sábado de 9:00 a.m. a 6:00 p.m.</p>
+        </div>
+      </div>
+
+      <div class="store-info-item">
+        <div class="store-info-icon">
+          <i class="fa-solid fa-credit-card"></i>
+        </div>
+        <div>
+          <h3>Métodos de pago</h3>
+          <p>Aceptamos efectivo, transferencia, punto de venta, pago móvil, Binance, Zelle y otros métodos disponibles.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="store-info-cta">
+      <div>
+        <h3>Antes de venir, confirma disponibilidad.</h3>
+        <p>Pregunta por talla, color, modelo, delivery o retiro en tienda.</p>
+      </div>
+
+      <a 
+        href="https://wa.me/584121068677?text=Hola,%20quiero%20consultar%20disponibilidad,%20delivery%20o%20retiro%20en%20tienda." 
+        target="_blank"
+      >
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+  <div class="floating-social">
+    <a href="https://www.tiktok.com/@ojedasportss?_r=1&_t=ZS-96QRAnDXPbF" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/ojedasportss?igsh=MXhkYnZ6b25zdWFqNQ==" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/584121068677" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+
+  <footer id="contacto" class="footer-final-section">
+  <div class="container footer-final-wrap">
+    <div class="footer-brand">
+      <img src="logo_negro.png" alt="Logo Ojeda Sport">
+      <div>
+        <h2>OJEDA SPORT</h2>
+        <p>Tu tienda deportiva online.</p>
+      </div>
+    </div>
+
+    <div class="footer-links footer-links-final">
+      <a href="https://www.tiktok.com/@ojedasportss?_r=1&_t=ZS-96QRAnDXPbF" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/ojedasportss?igsh=MXhkYnZ6b25zdWFqNQ==" target="_blank">Instagram</a>
+      <a href="https://wa.me/584121068677" target="_blank">WhatsApp</a>
+      <a href="#">Políticas</a>
+      <a href="#">Soporte</a>
+    </div>
+  </div>
+</footer>
+      
+  <script src="script.js"></script>
+
+<script>
+window.addEventListener("load", function () {
+  const dots = document.querySelectorAll(".page-nav a");
+
+  const sections = [
+  "inicio",
+  "nuevos",
+  "balones",
+  "mundial",
+  "promo",
+  "videos",
+  "accesorios",
+  "redes",
+  "info"
+];
+  function activateDot(id) {
+    dots.forEach(function (dot) {
+      dot.classList.remove("active");
+    });
+
+    const target = Array.from(dots).find(function (dot) {
+      return dot.getAttribute("href") === "#" + id;
+    });
+
+    if (target) {
+      target.classList.add("active");
+    }
+  }
+
+ function updateActiveSection() {
+  let current = null;
+  let closestDistance = Infinity;
+
+  const detectionLine = window.innerHeight * 0.42;
+
+  sections.forEach(function (id) {
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+    const sectionCenter = rect.top + rect.height / 2;
+
+    const isVisible =
+      rect.top < window.innerHeight * 0.85 &&
+      rect.bottom > window.innerHeight * 0.08;
+
+    const distance = Math.abs(sectionCenter - detectionLine);
+
+    if (isVisible && distance < closestDistance) {
+      closestDistance = distance;
+      current = id;
+    }
+  });
+
+  if (current) {
+    activateDot(current);
+  }
+}
+
+  window.addEventListener("scroll", updateActiveSection);
+  window.addEventListener("resize", updateActiveSection);
+  window.addEventListener("hashchange", updateActiveSection);
+
+  dots.forEach(function (dot) {
+    dot.addEventListener("click", function () {
+      const id = dot.getAttribute("href").replace("#", "");
+
+      setTimeout(function () {
+        activateDot(id);
+      }, 250);
+    });
+  });
+
+  updateActiveSection();
+});
+</script>
+
+</body>
+</html>
