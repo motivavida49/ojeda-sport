@@ -6,7 +6,7 @@
   <title>Ojeda Sport | Tienda Deportiva</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style.css?v=mobile-final-2">
   
 </head>
 <body>
@@ -65,7 +65,7 @@
   </div>
 </header>
 
-</main>
+<main>
     <section id="inicio" class="container hero">
        
       <div class="hero-text">
@@ -703,6 +703,8 @@
     </div>
   </div>
 </section>
+</main>
+
   <div class="floating-social">
     <a href="https://www.tiktok.com/@ojedasportss?_r=1&_t=ZS-96QRAnDXPbF" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
     <a href="https://www.instagram.com/ojedasportss?igsh=MXhkYnZ6b25zdWFqNQ==" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -729,84 +731,8 @@
   </div>
 </footer>
       
-  <script src="script.js"></script>
+  <script src="script.js?v=mobile-final-2"></script>
 
-<script>
-window.addEventListener("load", function () {
-  const dots = document.querySelectorAll(".page-nav a");
-
-  const sections = [
-  "inicio",
-  "nuevos",
-  "balones",
-  "mundial",
-  "promo",
-  "videos",
-  "accesorios",
-  "redes",
-  "info"
-];
-  function activateDot(id) {
-    dots.forEach(function (dot) {
-      dot.classList.remove("active");
-    });
-
-    const target = Array.from(dots).find(function (dot) {
-      return dot.getAttribute("href") === "#" + id;
-    });
-
-    if (target) {
-      target.classList.add("active");
-    }
-  }
-
- function updateActiveSection() {
-  let current = null;
-  let closestDistance = Infinity;
-
-  const detectionLine = window.innerHeight * 0.42;
-
-  sections.forEach(function (id) {
-    const section = document.getElementById(id);
-    if (!section) return;
-
-    const rect = section.getBoundingClientRect();
-    const sectionCenter = rect.top + rect.height / 2;
-
-    const isVisible =
-      rect.top < window.innerHeight * 0.85 &&
-      rect.bottom > window.innerHeight * 0.08;
-
-    const distance = Math.abs(sectionCenter - detectionLine);
-
-    if (isVisible && distance < closestDistance) {
-      closestDistance = distance;
-      current = id;
-    }
-  });
-
-  if (current) {
-    activateDot(current);
-  }
-}
-
-  window.addEventListener("scroll", updateActiveSection);
-  window.addEventListener("resize", updateActiveSection);
-  window.addEventListener("hashchange", updateActiveSection);
-
-  dots.forEach(function (dot) {
-    dot.addEventListener("click", function () {
-      const id = dot.getAttribute("href").replace("#", "");
-
-      setTimeout(function () {
-        activateDot(id);
-      }, 250);
-    });
-  });
-
-  updateActiveSection();
-});
-</script>
 
 </body>
 </html>

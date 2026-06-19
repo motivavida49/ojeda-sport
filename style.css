@@ -5171,216 +5171,504 @@ footer#contacto .footer-links a:hover {
   }
 }
 
-```css
 /* =========================================================
-   CORRECCIÓN GENERAL PARA TELÉFONOS
+   RESPONSIVE MÓVIL FINAL — OJEDA SPORT
    ========================================================= */
 
 @media (max-width: 768px) {
-
   html,
   body {
     width: 100% !important;
     max-width: 100% !important;
-    margin: 0 !important;
     overflow-x: hidden !important;
   }
 
-  * {
-    box-sizing: border-box !important;
+  body {
+    min-width: 0 !important;
   }
 
   .container {
-    width: 100% !important;
+    width: calc(100% - 32px) !important;
     max-width: 100% !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin-inline: auto !important;
   }
 
-  /* Encabezado */
+  .page-nav,
+  .floating-social,
+  .global-sport-pattern {
+    display: none !important;
+  }
 
   header {
+    position: sticky !important;
+    top: 0 !important;
     width: 100% !important;
-    position: relative !important;
+    display: block !important;
+    z-index: 9999 !important;
   }
 
   header .navbar {
-    width: 100% !important;
-    min-height: auto !important;
-    padding: 12px 16px !important;
+    min-height: 72px !important;
+    height: auto !important;
+    padding: 8px 0 !important;
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
     justify-content: space-between !important;
     gap: 10px !important;
   }
 
   header .logo {
+    width: auto !important;
+    min-width: 0 !important;
     display: flex !important;
+    flex-direction: row !important;
     align-items: center !important;
     gap: 8px !important;
-    min-width: 0 !important;
   }
 
-  header .logo img,
   header .logo-img {
-    width: 54px !important;
-    height: 54px !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
     object-fit: contain !important;
-    flex-shrink: 0 !important;
+    flex: 0 0 48px !important;
   }
 
   header .logo h2 {
-    margin: 0 !important;
-    font-size: 21px !important;
+    margin: 0 0 3px !important;
+    font-size: 18px !important;
     line-height: 0.95 !important;
+    letter-spacing: -0.7px !important;
   }
 
   header .logo p {
-    margin: 4px 0 0 !important;
-    font-size: 11px !important;
+    margin: 0 !important;
+    font-size: 10px !important;
     line-height: 1.1 !important;
   }
 
   header nav {
-    margin-left: auto !important;
+    display: none !important;
   }
 
-  header nav a {
-    padding: 10px 14px !important;
-    font-size: 14px !important;
+  header .cart-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    padding: 9px 12px !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
     white-space: nowrap !important;
   }
 
-  /* Oculta los puntos laterales que tapan el contenido */
-
-  aside {
-    display: none !important;
+  .section,
+  .audience-section,
+  .ojeda-videos-section {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
   }
 
-  /* Oculta los botones flotantes; las redes siguen en el footer */
-
-  .floating-social {
-    display: none !important;
+  .section-title {
+    margin-bottom: 26px !important;
   }
 
-  /* Secciones generales */
-
-  main,
-  section {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow: hidden !important;
+  .section-title small,
+  .audience-title small {
+    font-size: 11px !important;
+    letter-spacing: 3px !important;
   }
 
-  section {
-    min-height: auto !important;
-    padding-top: 54px !important;
-    padding-bottom: 54px !important;
-  }
-
-  img,
-  video {
-    max-width: 100% !important;
-  }
-
-  video {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Portada */
-
-  #inicio {
-    padding-top: 30px !important;
-  }
-
-  #inicio .container,
-  .hero .container,
-  .hero-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-
-  #inicio h1,
-  .hero h1 {
-    max-width: 100% !important;
-    margin-top: 0 !important;
-    font-size: clamp(38px, 11vw, 54px) !important;
-    line-height: 0.98 !important;
+  .section-title h2,
+  .audience-title h2,
+  .mundial-title h2 {
+    font-size: clamp(32px, 10vw, 42px) !important;
+    line-height: 1.02 !important;
     letter-spacing: -1.5px !important;
   }
 
-  #inicio p,
+  .audience-title p,
+  .mundial-title p {
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Portada */
+  #inicio.hero {
+    min-height: auto !important;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding-top: 34px !important;
+    padding-bottom: 48px !important;
+  }
+
+  .hero h1 {
+    max-width: 100% !important;
+    font-size: clamp(38px, 12vw, 50px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -2px !important;
+    margin-bottom: 18px !important;
+  }
+
   .hero p {
     max-width: 100% !important;
     font-size: 16px !important;
     line-height: 1.55 !important;
+    margin-bottom: 24px !important;
   }
 
-  .hero-buttons,
-  .buttons,
-  .cta-group {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 12px !important;
+  .hero-buttons {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
   }
 
-  .hero-buttons a,
-  .hero-buttons button,
-  .buttons a,
-  .buttons button,
-  .cta-group a,
-  .cta-group button {
+  .hero-buttons a {
     width: 100% !important;
+    padding: 14px 18px !important;
     text-align: center !important;
+  }
+
+  .hero-image {
+    padding: 8px !important;
+    border-radius: 24px !important;
+  }
+
+  .hero-image img {
+    height: 320px !important;
+    border-radius: 18px !important;
+  }
+
+  .offer-box {
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 18px !important;
+    padding: 16px !important;
+    border-radius: 18px !important;
+  }
+
+  .offer-box h3 {
+    font-size: 21px !important;
+  }
+
+  /* Categorías visuales */
+  .audience-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+    gap: 16px !important;
+  }
+
+  .audience-card,
+  .audience-card-large {
+    grid-row: auto !important;
+    min-height: 300px !important;
+    border-radius: 24px !important;
+  }
+
+  .audience-video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  .audience-content {
+    left: 20px !important;
+    right: 20px !important;
+    bottom: 20px !important;
+  }
+
+  .audience-content h3,
+  .audience-card:not(.audience-card-large) .audience-content h3 {
+    font-size: 36px !important;
+    line-height: 0.98 !important;
+  }
+
+  /* Balones */
+  .real-balls-section {
+    padding: 26px 16px !important;
+    border-radius: 26px !important;
+  }
+
+  .real-balls-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 14px !important;
+    margin-bottom: 22px !important;
+  }
+
+  .real-balls-header h2 {
+    max-width: 100% !important;
+    font-size: 34px !important;
+    letter-spacing: -1.2px !important;
+  }
+
+  .real-balls-header p {
+    max-width: 100% !important;
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+
+  .balls-slider {
+    width: 100% !important;
+    padding: 10px 0 18px !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+
+  .balls-track {
+    gap: 14px !important;
+    padding: 0 2px !important;
+  }
+
+  .ball-card-real {
+    flex: 0 0 min(78vw, 285px) !important;
+    width: min(78vw, 285px) !important;
+    min-width: min(78vw, 285px) !important;
+    padding: 22px 16px !important;
+  }
+
+  .slider-actions {
     justify-content: center !important;
   }
 
-  /* Cuadrículas y tarjetas */
-
-  .categories-grid,
-  .products-grid,
-  .balls-grid,
-  .videos-grid,
-  .accessories-grid,
-  .social-cards,
-  .info-grid,
-  .contact-grid {
-    display: grid !important;
+  /* Mundial */
+  .worldcup-grid {
     grid-template-columns: 1fr !important;
-    gap: 18px !important;
+    gap: 16px !important;
   }
 
-  .category-card,
-  .product-card,
-  .video-card,
-  .social-card,
-  .info-card {
+  .worldcup-center {
+    grid-column: auto !important;
+    order: -1 !important;
+    min-height: 360px !important;
+    padding: 28px 18px !important;
+  }
+
+  .jersey-card {
+    min-height: 280px !important;
+    padding: 12px !important;
+    border-radius: 24px !important;
+  }
+
+  .jersey-video {
+    height: 255px !important;
+    border-radius: 18px !important;
+  }
+
+  .worldcup-ball-video {
+    width: 190px !important;
+    height: 190px !important;
+  }
+
+  /* Promoción */
+  .promo {
+    grid-template-columns: 1fr !important;
+    border-radius: 26px !important;
+  }
+
+  .promo-content {
+    padding: 30px 22px !important;
+  }
+
+  .promo-content h2 {
+    font-size: 36px !important;
+  }
+
+  .promo img {
+    min-height: 260px !important;
+    max-height: 320px !important;
+  }
+
+  /* Videos: carrusel horizontal para no alargar demasiado la página */
+  .ojeda-videos-layout {
+    grid-template-columns: 1fr !important;
+    gap: 30px !important;
+    padding: 30px 18px !important;
+    border-radius: 26px !important;
+  }
+
+  .ojeda-videos-text h2 {
+    font-size: 38px !important;
+  }
+
+  .ojeda-videos-text p {
+    font-size: 16px !important;
+  }
+
+  .video-external-links {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .ojeda-phone-gallery {
     width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    min-height: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    gap: 14px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding: 6px 2px 18px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .ojeda-phone,
+  .ojeda-phone-center {
+    flex: 0 0 min(78vw, 280px) !important;
+    width: min(78vw, 280px) !important;
+    height: 470px !important;
+    padding: 10px !important;
+    transform: none !important;
+    scroll-snap-align: center !important;
+  }
+
+  /* Accesorios, guía y testimonios */
+  .accessories-grid,
+  .testimonials {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .accessory-card {
+    flex-direction: row !important;
+    padding: 20px !important;
+    border-radius: 22px !important;
+  }
+
+  .guide-box {
+    grid-template-columns: 1fr !important;
+    padding: 28px 20px !important;
+    border-radius: 26px !important;
+  }
+
+  .guide-box h2 {
+    font-size: 34px !important;
+  }
+
+  /* Redes */
+  #redes .social-section {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+    padding: 32px 18px !important;
+    border-radius: 26px !important;
+  }
+
+  #redes .social-copy h2 {
+    font-size: 38px !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  #redes .social-copy p {
+    font-size: 16px !important;
+  }
+
+  #redes .social-cards {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  #redes .social-card {
+    min-height: auto !important;
+    padding: 24px 20px !important;
+  }
+
+  #redes .social-card h3 {
+    font-size: 26px !important;
+  }
+
+  #redes .social-card p {
+    font-size: 16px !important;
+  }
+
+  /* Información de tienda */
+  .store-info-panel {
+    padding: 34px 18px !important;
+    border-radius: 26px !important;
+  }
+
+  .store-info-header {
+    margin-bottom: 26px !important;
+  }
+
+  .store-info-header h2 {
+    font-size: 38px !important;
+    letter-spacing: -1.5px !important;
+  }
+
+  .store-info-header p {
+    font-size: 16px !important;
+  }
+
+  .store-info-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .store-info-grid .store-info-item:last-child {
+    grid-column: auto !important;
+    max-width: none !important;
+  }
+
+  .store-info-item {
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    gap: 14px !important;
+    padding: 18px !important;
+    border-radius: 20px !important;
+  }
+
+  .store-info-icon {
+    width: 52px !important;
+    height: 52px !important;
+    border-radius: 16px !important;
+    font-size: 22px !important;
+  }
+
+  .store-info-item h3 {
+    font-size: 20px !important;
+  }
+
+  .store-info-item p {
+    font-size: 15px !important;
+  }
+
+  .store-info-cta {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 22px 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .store-info-cta h3 {
+    font-size: 21px !important;
+  }
+
+  .store-info-cta p {
+    font-size: 15px !important;
+  }
+
+  .store-info-cta a {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 15px 18px !important;
+    font-size: 16px !important;
   }
 
   /* Footer */
-
   .footer-final-section {
-    width: 100% !important;
-    padding: 36px 18px !important;
-    overflow: hidden !important;
+    padding: 34px 0 !important;
   }
 
   .footer-final-wrap {
-    width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 28px !important;
+    min-height: 0 !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
     text-align: center !important;
   }
 
@@ -5392,71 +5680,80 @@ footer#contacto .footer-links a:hover {
   }
 
   .footer-final-section .footer-brand img {
-    width: 72px !important;
-    height: 72px !important;
+    width: 68px !important;
+    height: 68px !important;
   }
 
   .footer-final-section .footer-brand h2 {
-    font-size: 27px !important;
+    font-size: 26px !important;
   }
 
   .footer-final-section .footer-brand p {
-    font-size: 15px !important;
+    font-size: 14px !important;
   }
 
   .footer-final-section .footer-links-final {
     width: 100% !important;
     padding: 0 !important;
-    display: flex !important;
-    justify-content: center !important;
-    flex-wrap: wrap !important;
-    gap: 14px 20px !important;
     transform: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 14px 18px !important;
   }
 
   .footer-final-section .footer-links-final a {
-    font-size: 16px !important;
+    font-size: 15px !important;
     white-space: normal !important;
   }
 }
 
-
-/* Ajustes para teléfonos pequeños */
-
-@media (max-width: 480px) {
-
+@media (max-width: 420px) {
   .container {
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+    width: calc(100% - 24px) !important;
   }
 
-  header .navbar {
-    padding: 10px 12px !important;
-  }
-
-  header .logo img,
   header .logo-img {
-    width: 46px !important;
-    height: 46px !important;
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px !important;
   }
 
   header .logo h2 {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
 
-  header nav a {
-    padding: 9px 11px !important;
-    font-size: 12px !important;
+  header .logo p {
+    font-size: 9px !important;
   }
 
-  #inicio h1,
+  header .cart-btn {
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+  }
+
   .hero h1 {
-    font-size: 38px !important;
+    font-size: 36px !important;
   }
 
-  section {
-    padding-top: 44px !important;
-    padding-bottom: 44px !important;
+  .hero-image img {
+    height: 285px !important;
+  }
+
+  .audience-card,
+  .audience-card-large {
+    min-height: 270px !important;
+  }
+
+  .audience-content h3,
+  .audience-card:not(.audience-card-large) .audience-content h3 {
+    font-size: 32px !important;
+  }
+
+  .ojeda-phone,
+  .ojeda-phone-center {
+    flex-basis: 82vw !important;
+    width: 82vw !important;
+    height: 440px !important;
   }
 }
-```
