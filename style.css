@@ -5785,11 +5785,6 @@ footer#contacto .footer-links a:hover {
   .hero-pattern-icons i,
   .category-card::before,
   .category-card::after,
-  .real-ball-wrap,
-  .video-ball-wrap,
-  .ball-photo-3d,
-  .real-ball-wrap::before,
-  .video-ball-wrap::after,
   .phone-screen::before {
     animation: none !important;
   }
