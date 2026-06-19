@@ -16,7 +16,7 @@
       ".hero, .section, .promo, .guide-box"
     );
 
-    // Animación de entrada.
+    // Animaciones de entrada: se ejecutan una sola vez.
     if ("IntersectionObserver" in window) {
       const revealObserver = new IntersectionObserver(
         (entries) => {
@@ -27,7 +27,7 @@
             }
           });
         },
-        { threshold: 0.08 }
+        { threshold: 0.06, rootMargin: "80px 0px" }
       );
 
       revealElements.forEach((element) => {
@@ -38,7 +38,7 @@
       revealElements.forEach((element) => element.classList.add("show"));
     }
 
-    // Barra de progreso y punto activo.
+    // Barra de progreso y navegación lateral usando un solo ciclo por frame.
     const navItems = navDots
       .map((dot) => {
         const selector = dot.getAttribute("href");
@@ -57,7 +57,9 @@
         scrollProgress.style.width = `${progress}%`;
       }
 
-      if (!navItems.length) return;
+      if (!navItems.length || window.matchMedia("(max-width: 768px)").matches) {
+        return;
+      }
 
       const detectionLine = window.innerHeight * 0.42;
       let activeItem = navItems[0];
@@ -89,8 +91,8 @@
     };
 
     window.addEventListener("scroll", requestScrollUpdate, { passive: true });
-    window.addEventListener("resize", requestScrollUpdate);
-    window.addEventListener("load", updateScrollUI);
+    window.addEventListener("resize", requestScrollUpdate, { passive: true });
+    window.addEventListener("load", updateScrollUI, { once: true });
     updateScrollUI();
 
     // Slider de balones: un solo controlador.
@@ -109,7 +111,6 @@
     };
 
     if (ballsSlider && prevBalls && nextBalls) {
-      // Elimina el onclick escrito en el HTML para evitar doble movimiento.
       prevBalls.removeAttribute("onclick");
       nextBalls.removeAttribute("onclick");
 
@@ -157,12 +158,37 @@
       });
     });
 
-    // Reduce consumo en teléfonos: reproduce videos únicamente cerca de la pantalla.
-    const videos = document.querySelectorAll("video");
+    // Carga diferida real de videos.
+    // El navegador no descarga cada MP4 al abrir la página; los carga cuando se acercan.
+    const videos = Array.from(document.querySelectorAll("video"));
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    const saveData = Boolean(connection?.saveData);
+
+    const loadVideoSources = (video) => {
+      if (video.dataset.loaded === "true") return;
+
+      video.querySelectorAll("source[data-src]").forEach((source) => {
+        source.src = source.dataset.src;
+        source.removeAttribute("data-src");
+      });
+
+      video.dataset.loaded = "true";
+      video.load();
+    };
+
+    const playVideo = (video) => {
+      if (document.hidden) return;
+      const playPromise = video.play();
+      if (playPromise && typeof playPromise.catch === "function") {
+        playPromise.catch(() => {});
+      }
+    };
 
     videos.forEach((video) => {
       video.muted = true;
       video.playsInline = true;
+      video.preload = "none";
     });
 
     if ("IntersectionObserver" in window && videos.length) {
@@ -172,19 +198,47 @@
             const video = entry.target;
 
             if (entry.isIntersecting) {
-              video.play().catch(() => {});
+              loadVideoSources(video);
+
+              if (!saveData) {
+                if (video.readyState >= 2) {
+                  playVideo(video);
+                } else {
+                  video.addEventListener("canplay", () => playVideo(video), {
+                    once: true,
+                  });
+                }
+              }
             } else {
               video.pause();
             }
           });
         },
         {
-          rootMargin: "160px 0px",
+          rootMargin: isMobile ? "140px 0px" : "320px 0px",
           threshold: 0.01,
         }
       );
 
       videos.forEach((video) => videoObserver.observe(video));
+    } else {
+      // Respaldo para navegadores antiguos: carga los videos, pero sin forzar todos a reproducirse.
+      videos.forEach(loadVideoSources);
     }
+
+    // Al cambiar de pestaña, detiene decodificación y consumo de batería.
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) {
+        videos.forEach((video) => video.pause());
+      } else {
+        videos.forEach((video) => {
+          const rect = video.getBoundingClientRect();
+          const visible = rect.top < window.innerHeight && rect.bottom > 0;
+          if (visible && video.dataset.loaded === "true" && !saveData) {
+            playVideo(video);
+          }
+        });
+      }
+    });
   });
 })();

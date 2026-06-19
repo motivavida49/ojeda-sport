@@ -5758,106 +5758,60 @@ footer#contacto .footer-links a:hover {
   }
 }
 
-```css
 /* =========================================================
-   PRUEBA MÓVIL: HEADER MÁS PEQUEÑO + MÁS AIRE
-   Para quitarla, borra todo este bloque.
+   OPTIMIZACIÓN DE RENDIMIENTO — MÓVIL
+   No modifica la composición de escritorio.
    ========================================================= */
-
 @media (max-width: 768px) {
-
-  /* Barra superior más delgada */
-  header .navbar {
-    min-height: 58px !important;
-    height: 58px !important;
-    padding: 4px 0 !important;
-    gap: 8px !important;
+  /* Evita renderizar secciones lejanas hasta que se acerquen al viewport. */
+  main > section:not(#inicio) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 760px;
   }
 
-  header .logo {
-    gap: 6px !important;
+  /* Los desenfoques en elementos grandes consumen bastante GPU en móviles. */
+  header,
+  .offer-box,
+  .floating-social a,
+  .store-info-item,
+  .page-nav a::after,
+  .jersey-open-btn {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
   }
 
-  header .logo-img {
-    width: 38px !important;
-    height: 38px !important;
-    flex: 0 0 38px !important;
+  /* Conserva los videos, pero elimina movimientos decorativos simultáneos. */
+  .global-sport-pattern .pattern-icon,
+  .hero-pattern-icons i,
+  .category-card::before,
+  .category-card::after,
+  .real-ball-wrap,
+  .video-ball-wrap,
+  .ball-photo-3d,
+  .real-ball-wrap::before,
+  .video-ball-wrap::after,
+  .phone-screen::before {
+    animation: none !important;
   }
 
-  header .logo h2 {
-    font-size: 15px !important;
-    line-height: 0.95 !important;
-    letter-spacing: -0.4px !important;
-    margin-bottom: 2px !important;
+  .global-sport-pattern {
+    display: none !important;
   }
 
-  header .logo p {
-    font-size: 9px !important;
-    line-height: 1 !important;
-  }
-
-  header .cart-btn {
-    padding: 7px 10px !important;
-    border-radius: 18px !important;
-    font-size: 10px !important;
-    line-height: 1 !important;
-  }
-
-  /* Más separación entre secciones */
-  .section,
-  .audience-section,
-  .ojeda-videos-section {
-    padding-top: 66px !important;
-    padding-bottom: 66px !important;
-  }
-
-  /* Más aire entre título y contenido */
-  .section-title,
-  .audience-title,
-  .mundial-title {
-    margin-bottom: 34px !important;
-  }
-
-  /* Más separación entre tarjetas */
-  .audience-grid,
-  .worldcup-grid,
-  .accessories-grid,
-  .testimonials,
-  #redes .social-cards,
-  .store-info-grid {
-    gap: 22px !important;
-  }
-
-  /* Un poco más de aire dentro de los bloques principales */
-  .real-balls-section,
-  .ojeda-videos-layout,
-  #redes .social-section,
-  .store-info-panel,
-  .guide-box {
-    border-radius: 28px !important;
+  video {
+    transform: translateZ(0);
+    backface-visibility: hidden;
   }
 }
 
-@media (max-width: 420px) {
-
-  header .navbar {
-    min-height: 54px !important;
-    height: 54px !important;
-  }
-
-  header .logo-img {
-    width: 34px !important;
-    height: 34px !important;
-    flex-basis: 34px !important;
-  }
-
-  header .logo h2 {
-    font-size: 14px !important;
-  }
-
-  header .cart-btn {
-    padding: 7px 9px !important;
-    font-size: 9px !important;
+/* Respeta teléfonos configurados para reducir movimiento. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
-```
