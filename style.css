@@ -6504,3 +6504,160 @@ footer#contacto .footer-links a:hover {
     animation: none !important;
   }
 }
+
+/* =========================================================
+   AJUSTE MÓVIL: RUTA DENTRO DEL HEADER, SIN SOLAPAMIENTOS
+   ========================================================= */
+@media (max-width: 1100px) {
+  header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10050 !important;
+    display: block !important;
+    background: #090909 !important;
+    overflow: visible !important;
+  }
+
+  header .mobile-page-tabs {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    z-index: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 9px 9px 11px !important;
+    gap: 7px !important;
+    overflow: hidden !important;
+    background: #090909 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10) !important;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28) !important;
+    backdrop-filter: none !important;
+  }
+
+  header .mobile-page-tabs .journey-step-link {
+    position: relative !important;
+    z-index: 1 !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    padding: 7px 7px !important;
+    border-radius: 16px !important;
+    background: rgba(255, 255, 255, 0.045) !important;
+    border: 1px solid rgba(255, 255, 255, 0.10) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    touch-action: manipulation !important;
+    -webkit-tap-highlight-color: rgba(225, 191, 68, 0.18) !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  header .mobile-page-tabs .journey-step-link:active {
+    transform: scale(0.98) !important;
+  }
+
+  header .mobile-page-tabs .journey-step-link.is-current {
+    background: rgba(225, 191, 68, 0.15) !important;
+    border-color: rgba(225, 191, 68, 0.62) !important;
+  }
+
+  header .mobile-page-tabs .journey-step-link.is-next .journey-step-number {
+    animation: none !important;
+    box-shadow: none !important;
+  }
+
+  header .mobile-page-tabs .journey-step-number {
+    width: 28px !important;
+    height: 28px !important;
+    flex: 0 0 28px !important;
+    box-shadow: none !important;
+  }
+
+  header .mobile-page-tabs .journey-step-text {
+    min-width: 0 !important;
+    width: auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    backdrop-filter: none !important;
+  }
+
+  header .mobile-page-tabs .journey-step-text strong {
+    display: block !important;
+    overflow: hidden !important;
+    color: #ffffff !important;
+    font-size: 11px !important;
+    line-height: 1.05 !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+  }
+
+  header .mobile-page-tabs .journey-step-text small {
+    display: none !important;
+  }
+
+  main {
+    position: relative !important;
+    z-index: 2 !important;
+    padding-top: 0 !important;
+  }
+
+  main > section:first-child {
+    margin-top: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  header .navbar {
+    min-height: 64px !important;
+    height: 64px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  body.site-step-1 main > .hero:first-child {
+    padding-top: 30px !important;
+  }
+
+  body.site-step-2 main > .page-intro:first-child,
+  body.site-step-3 main > .page-intro:first-child {
+    padding-top: 24px !important;
+  }
+
+  .hero .badge,
+  .page-intro small {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  header .mobile-page-tabs {
+    gap: 5px !important;
+    padding-inline: 7px !important;
+  }
+
+  header .mobile-page-tabs .journey-step-link {
+    gap: 5px !important;
+    padding-inline: 5px !important;
+  }
+
+  header .mobile-page-tabs .journey-step-number {
+    width: 26px !important;
+    height: 26px !important;
+    flex-basis: 26px !important;
+  }
+
+  header .mobile-page-tabs .journey-step-text strong {
+    font-size: 10px !important;
+  }
+}
