@@ -6661,3 +6661,89 @@ footer#contacto .footer-links a:hover {
     font-size: 10px !important;
   }
 }
+
+/* =========================================================
+   AJUSTE FINAL: CTA DE CONTINUIDAD + RUTA DESKTOP
+   ========================================================= */
+
+/* Botón principal más visible sin añadir otro color a la marca. */
+.page-journey-actions .page-primary {
+  justify-content: space-between !important;
+  gap: 14px !important;
+  padding: 7px 8px 7px 20px !important;
+  color: #ffffff !important;
+  background: rgba(8, 8, 8, 0.96) !important;
+  border: 1px solid rgba(225, 191, 68, 0.58) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24) !important;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.page-primary-arrow {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e1bf44;
+  color: #080808;
+  font-size: 23px;
+  font-weight: 950;
+  line-height: 1;
+  box-shadow: 0 8px 20px rgba(225, 191, 68, 0.22);
+  animation: pageArrowNudge 1.8s ease-in-out infinite;
+}
+
+@keyframes pageArrowNudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(5px); }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .page-journey-actions .page-primary:hover {
+    transform: translateY(-3px) !important;
+    border-color: #e1bf44 !important;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34) !important;
+  }
+
+  .page-journey-actions .page-primary:hover .page-primary-arrow {
+    transform: translateX(6px) scale(1.04);
+  }
+
+  .page-journey-card {
+    transition: transform 0.25s ease, border-color 0.25s ease !important;
+  }
+
+  .page-journey-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(225, 191, 68, 0.42);
+  }
+}
+
+/* Evita que la ruta lateral quede parcialmente debajo del header
+   en ventanas bajas, zoom alto o pantallas con poca altura útil. */
+@media (min-width: 1101px) {
+  .journey-rail {
+    top: calc(50% + 58px) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-journey-actions .page-primary {
+    min-height: 54px !important;
+    padding-left: 18px !important;
+  }
+
+  .page-primary-arrow {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-primary-arrow {
+    animation: none !important;
+  }
+}
