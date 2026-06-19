@@ -6747,3 +6747,38 @@ footer#contacto .footer-links a:hover {
     animation: none !important;
   }
 }
+
+/* =========================================================
+   AJUSTE DEFINITIVO: CTA PASO 1 + RUTA LATERAL DESKTOP
+   ========================================================= */
+
+/* En la primera página invertimos el contraste del botón tanto en
+   computadora como en teléfono: fondo amarillo y flecha blanca animada. */
+body.site-step-1 .page-journey-actions .page-primary {
+  color: #080808 !important;
+  background: linear-gradient(135deg, #f0cf4a 0%, #e1bf44 58%, #c79f18 100%) !important;
+  border-color: rgba(255, 255, 255, 0.34) !important;
+  box-shadow: 0 14px 32px rgba(225, 191, 68, 0.24) !important;
+}
+
+body.site-step-1 .page-journey-actions .page-primary .page-primary-arrow {
+  background: #ffffff !important;
+  color: #080808 !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22) !important;
+}
+
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+  body.site-step-1 .page-journey-actions .page-primary:hover {
+    border-color: #ffffff !important;
+    box-shadow: 0 18px 38px rgba(225, 191, 68, 0.32) !important;
+  }
+}
+
+/* En computadora la ruta comienza debajo del header, en vez de
+   centrarse verticalmente y quedar parcialmente tapada en ventanas bajas. */
+@media (min-width: 1101px) {
+  .journey-rail {
+    top: clamp(205px, 28vh, 285px) !important;
+    transform: none !important;
+  }
+}
