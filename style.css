@@ -5757,3 +5757,107 @@ footer#contacto .footer-links a:hover {
     height: 440px !important;
   }
 }
+
+```css
+/* =========================================================
+   PRUEBA MÓVIL: HEADER MÁS PEQUEÑO + MÁS AIRE
+   Para quitarla, borra todo este bloque.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Barra superior más delgada */
+  header .navbar {
+    min-height: 58px !important;
+    height: 58px !important;
+    padding: 4px 0 !important;
+    gap: 8px !important;
+  }
+
+  header .logo {
+    gap: 6px !important;
+  }
+
+  header .logo-img {
+    width: 38px !important;
+    height: 38px !important;
+    flex: 0 0 38px !important;
+  }
+
+  header .logo h2 {
+    font-size: 15px !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.4px !important;
+    margin-bottom: 2px !important;
+  }
+
+  header .logo p {
+    font-size: 9px !important;
+    line-height: 1 !important;
+  }
+
+  header .cart-btn {
+    padding: 7px 10px !important;
+    border-radius: 18px !important;
+    font-size: 10px !important;
+    line-height: 1 !important;
+  }
+
+  /* Más separación entre secciones */
+  .section,
+  .audience-section,
+  .ojeda-videos-section {
+    padding-top: 66px !important;
+    padding-bottom: 66px !important;
+  }
+
+  /* Más aire entre título y contenido */
+  .section-title,
+  .audience-title,
+  .mundial-title {
+    margin-bottom: 34px !important;
+  }
+
+  /* Más separación entre tarjetas */
+  .audience-grid,
+  .worldcup-grid,
+  .accessories-grid,
+  .testimonials,
+  #redes .social-cards,
+  .store-info-grid {
+    gap: 22px !important;
+  }
+
+  /* Un poco más de aire dentro de los bloques principales */
+  .real-balls-section,
+  .ojeda-videos-layout,
+  #redes .social-section,
+  .store-info-panel,
+  .guide-box {
+    border-radius: 28px !important;
+  }
+}
+
+@media (max-width: 420px) {
+
+  header .navbar {
+    min-height: 54px !important;
+    height: 54px !important;
+  }
+
+  header .logo-img {
+    width: 34px !important;
+    height: 34px !important;
+    flex-basis: 34px !important;
+  }
+
+  header .logo h2 {
+    font-size: 14px !important;
+  }
+
+  header .cart-btn {
+    padding: 7px 9px !important;
+    font-size: 9px !important;
+  }
+}
+```
